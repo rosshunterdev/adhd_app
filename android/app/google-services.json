@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "538871797674",
+    "project_id": "adhd-app-6c04f",
+    "storage_bucket": "adhd-app-6c04f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538871797674:android:2cbd19e2b6f944e03ebdd3",
+        "android_client_info": {
+          "package_name": "com.example.adhd_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpZXEx6mhYyvPketOOhrEwAK69Jpz_Mi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538871797674:android:4b376b32cd160c393ebdd3",
+        "android_client_info": {
+          "package_name": "com.rosscrawford.adhdapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpZXEx6mhYyvPketOOhrEwAK69Jpz_Mi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
