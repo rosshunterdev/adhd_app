@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(flutter create:*)",
-      "Bash(flutter pub:*)"
+      "Bash(flutter pub:*)",
+      "Bash(gh --version)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(cat /c/Users/rossh/Documents/First-Vault/Templates/*.md)"
     ]
   }
 }

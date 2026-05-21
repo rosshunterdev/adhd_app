@@ -1,28 +1,33 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../models/category.dart';
 import '../models/task.dart';
+import '../services/firestore_service.dart';
 import '../services/notification_service.dart';
-import '../services/task_service.dart';
 
 final notificationServiceProvider = Provider<NotificationService>((ref) {
   return NotificationService();
 });
 
-final taskServiceProvider = Provider<TaskService>((ref) {
+final firestoreServiceProvider = Provider<FirestoreService>((ref) {
   final uid = FirebaseAuth.instance.currentUser!.uid;
   final notifications = ref.read(notificationServiceProvider);
-  return TaskService(uid, notifications);
+  return FirestoreService(uid, notifications);
 });
 
-final nowTasksProvider = StreamProvider<List<Task>>((ref) {
-  return ref.watch(taskServiceProvider).nowStream;
+final todayTasksProvider = StreamProvider<List<Task>>((ref) {
+  return ref.watch(firestoreServiceProvider).todayStream;
 });
 
-final soonTasksProvider = StreamProvider<List<Task>>((ref) {
-  return ref.watch(taskServiceProvider).soonStream;
+final tomorrowTasksProvider = StreamProvider<List<Task>>((ref) {
+  return ref.watch(firestoreServiceProvider).tomorrowStream;
 });
 
-final laterTasksProvider = StreamProvider<List<Task>>((ref) {
-  return ref.watch(taskServiceProvider).laterStream;
+final goalsTasksProvider = StreamProvider<List<Task>>((ref) {
+  return ref.watch(firestoreServiceProvider).goalsStream;
+});
+
+final categoriesProvider = StreamProvider<List<Category>>((ref) {
+  return ref.watch(firestoreServiceProvider).categoriesStream;
 });
